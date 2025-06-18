@@ -52,15 +52,21 @@ if results['error']:
     print(f"Error: {results['error']}")
 ```
 
-## Demo Notebook
+## Demo Script
 
-A demonstration of the `initialize_stage_one` function can be found in the Jupyter notebook:
-`ibkr-trading-system/notebooks/demo/stage_one_demo.ipynb`.
+A command-line demonstration of the `initialize_stage_one` function can be found in the Python script:
+`ibkr-trading-system/scripts/demo_stage_one.py`.
 
-This notebook provides a step-by-step guide to:
-- Setting up the Python environment.
-- Calling `initialize_stage_one` with example parameters.
-- Inspecting the returned results.
+To run the demo:
+1. Ensure you have Python installed and the necessary dependencies (like `ib_insync`) are available (e.g., by installing from `requirements.txt`).
+2. Navigate to the root directory of the `ibkr-trading-system` project in your terminal.
+3. Execute the script using: `python scripts/demo_stage_one.py`
 
-It is highly recommended to run this notebook to understand the behavior of Stage One and to test your connection setup with Interactive Brokers.
-Remember to have TWS or IB Gateway running and configured for API access before executing the notebook.
+The script will:
+- Attempt to connect to Interactive Brokers (TWS or IB Gateway).
+- Fetch and display account summary information.
+- Fetch and display sample market data for a predefined stock.
+- Print status messages and any errors encountered.
+
+It is highly recommended to run this script to understand the behavior of Stage One and to test your connection setup with Interactive Brokers.
+Remember to have TWS or IB Gateway running, logged in, and configured for API access on the correct host/port before executing the script. You may need to modify the connection parameters at the top of the script if your setup differs from the defaults.
